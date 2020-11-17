@@ -204,7 +204,7 @@ Generate the locales by running
 # Hálózat konfigurálása
 /etc/hostname
 
-    Aporka
+    GépNév
     
 /etc/hosts
 
@@ -341,7 +341,7 @@ Ezután ismét le kell generálni a grub.cfg-t
 ##############################
 
 # Fehasználó hozzáadása
-    useradd -m -g users -G wheel,video -s /bin/bash volo
+    useradd -m -g users -G wheel,video -s /bin/bash abrak
     
 # Csatlakozás az internethez
     nmtui
@@ -361,7 +361,8 @@ Ezután ismét le kell generálni a grub.cfg-t
 # git tárolómból letölteni az arch repót
     cd /mnt
     mkdir /mnt/github
-    git clone https://github.com/voloferenc/arch
+    cd github
+    git clone https://github.com/abrakazabra007/arch
 
 # Saját csomagok telepítése 
     pacman -S --needed $(cat /mnt/arch/g5/arch/i3plist)
@@ -391,7 +392,7 @@ fájlban törölni a kommentet a következő rész elől
     sysctl -p /etc/sysctl.d/99-sysctl.conf
 
 # Felhasználó hozzáadása a vboxusers csoporthoz (virtualbox) 
-    gpasswd -a volo vboxusers
+    gpasswd -a abrak vboxusers
 
 # Saját rendszerindító szkirptek
     rc.d
@@ -408,10 +409,10 @@ fájlban törölni a kommentet a következő rész elől
 # Git repo letöltsée
     mkdir ~/github
     
-    git config --global user.name voloferenc
-    git config --global user.email voloferenc@email.com
+    git config --global user.name abrak
+    git config --global user.email abrak@email.com
     
-    git clone https://github.com/voloferenc/arch
+    git clone https://github.com/abrakazabra007/arch
 # Beállítások átmásolása
     mc
     
